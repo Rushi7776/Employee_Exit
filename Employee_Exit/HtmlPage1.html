@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiDatesPicker Demo</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include MultiDatesPicker plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    <script src="Multiple-Dates-Picker-for-jQuery-UI-latest/jquery-ui.multidatespicker.js"></script>
+
+    <!-- Inline CSS styles -->
+    <style>
+        /* jQuery UI Datepicker moving pixels fix */
+        table.ui-datepicker-calendar {
+            border-collapse: separate;
+        }
+
+        .ui-datepicker-calendar td {
+            border: 1px solid transparent;
+        }
+
+        /* jQuery UI Datepicker hide datepicker helper */
+        #ui-datepicker-div {
+            display: none;
+        }
+
+        /* jQuery UI Datepicker emphasis on selected dates */
+        .ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+            background: #743620 none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your provided <div> element -->
+    <div id="mdp-demo"></div>
+
+    <!-- Your modified script with correct function name -->
+    <script>
+        console.log('Script is running.');
+        var today = new Date();
+        //var y = today.getFullYear();
+        var y = 2023;
+        console.log('Script is running.'+y);
+        $('#mdp-demo').multiDatesPicker({
+            
+            addDates: ['10/14/' + y, '02/19/' + y, '01/14/' + y, '11/16/' + y],
+            numberOfMonths: [3, 4],
+            defaultDate: '1/1/' + y
+        });
+    </script>
+
+</body>
+</html>
